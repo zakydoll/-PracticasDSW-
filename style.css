@@ -1,0 +1,41 @@
+#nav{
+    border-style: dotted;
+    background-color: aqua;
+    padding: 15px;
+    display: flexbox;
+
+}        
+
+#menu{
+ border-style:double;
+ background-color:blue;
+ padding:15px;
+ border: 10px;  
+ margin-top: 10px;
+}
+
+.publicidad{
+
+    background-color: chartreuse;
+    border-style: dotted;
+    margin-top: 10PX;
+    height: 400px;
+}
+
+.flex{
+    display: flex;
+    
+}
+
+#contenido{
+    height: 400px;
+    width: 100%;
+    background-color: crimson;
+    margin: 10px;
+}
+
+#pie{
+    background-color: violet;
+    height: 100px;
+
+}
