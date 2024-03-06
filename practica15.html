@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudo Clases HTML y CSS</title>
+<style>
+    /* Estilos CSS */
+    /* Estilo para enlaces no visitados */
+    a:link {
+        color: blue;
+    }
+
+    /* Estilo para enlaces visitados */
+    a:visited {
+        color: purple;
+    }
+
+    /* Estilo para enlaces al pasar el mouse sobre ellos */
+    a:hover {
+        color: red;
+    }
+
+    /* Estilo para enlaces activos (mientras se está haciendo clic) */
+    a:active {
+        color: green;
+    }
+
+    /* Estilo para enlaces enfocados (cuando se navega por tabulación) */
+    a:focus {
+        outline: 2px solid orange;
+    }
+
+    /* Estilo para el primer elemento hijo de su contenedor */
+    div:first-child {
+        background-color: lightblue;
+    }
+
+    /* Estilo para el último elemento hijo de su contenedor */
+    div:last-child {
+        background-color: lightgreen;
+    }
+
+    /* Estilo para el elemento en la posición 2 dentro de su contenedor */
+    div:nth-child(2) {
+        background-color: lightcoral;
+    }
+
+    /* Estilo para el elemento en la posición 2 a partir del final dentro de su contenedor */
+    div:nth-last-child(2) {
+        background-color: lightsalmon;
+    }
+</style>
+</head>
+<body>
+<div>
+    <a href="#">Enlace 1</a>
+    <a href="#">Enlace 2</a>
+    <a href="#">Enlace 3</a>
+    <a href="#">Enlace 4</a>
+</div>
+<div>
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <p>Párrafo 3</p>
+</div>
+</body>
+</html>

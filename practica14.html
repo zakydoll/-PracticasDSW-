@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidades de Medida HTML y CSS</title>
+<style>
+    /* Estilos CSS */
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #333;
+    }
+
+    .example {
+        margin-bottom: 20px;
+    }
+
+    .example p {
+        margin: 0;
+    }
+
+    .fixed {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+    }
+
+    .percentage {
+        width: 50%;
+        height: 50px;
+        background-color: lightgreen;
+    }
+
+    .em {
+        font-size: 1.5em;
+    }
+
+    .rem {
+        font-size: 2rem;
+    }
+
+    .viewport {
+        width: 50vw;
+        height: 50vh;
+        background-color: lightcoral;
+    }
+
+    .pixel {
+        width: 100px;
+        height: 100px;
+        background-color: lightsalmon;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="example">
+        <p>Unidad de medida: <strong>px (píxeles)</strong></p>
+        <div class="fixed">200px x 100px</div>
+    </div>
+    <div class="example">
+        <p>Unidad de medida: <strong>% (porcentaje)</strong></p>
+        <div class="percentage">50% x 50px</div>
+    </div>
+    <div class="example">
+        <p>Unidad de medida: <strong>em (tamaño de fuente del elemento)</strong></p>
+        <div class="em">Texto con tamaño 1.5em</div>
+    </div>
+    <div class="example">
+        <p>Unidad de medida: <strong>rem (tamaño de fuente del elemento raíz)</strong></p>
+        <div class="rem">Texto con tamaño 2rem</div>
+    </div>
+    <div class="example">
+        <p>Unidad de medida: <strong>vw/vh (ancho/alto de la ventana gráfica)</strong></p>
+        <div class="viewport">50vw x 50vh</div>
+    </div>
+    <div class="example">
+        <p>Unidad de medida: <strong>px (píxeles)</strong></p>
+        <div class="pixel">100px x 100px</div>
+    </div>
+</div>
+</body>
+</html>
