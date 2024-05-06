@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            text-transform: uppercase; /* Convertir texto a mayúsculas */
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="%237E7E7E" d="M14.22 7.78L10 12l-4.22-4.22L4 9.56l6 6 6-6z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 20px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<form id="registroForm" action="#" onsubmit="return validarFormulario()">
+    <h2>Formulario de Registro</h2>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" required min="18" max="60">
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" required>
+
+    <label for="sexo">Sexo:</label>
+    <select id="sexo" name="sexo" required>
+        <option value="">Selecciona una opción</option>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+    </select>
+
+    <label for="ciudad">Ciudad:</label>
+    <select id="ciudad" name="ciudad" required>
+        <option value="">Selecciona una opción</option>
+        <option value="Tijuana">Tijuana</option>
+        <option value="Ensenada">Ensenada</option>
+        <option value="Rosarito">Rosarito</option>
+        <option value="Tecate">Tecate</option>
+    </select>
+
+    <label for="transporte">Transporte:</label>
+    <select id="transporte" name="transporte" required>
+        <option value="">Selecciona una opción</option>
+        <option value="Si">Si</option>
+        <option value="No">No</option>
+    </select>
+
+    <label for="camisa">Camisa:</label>
+    <select id="camisa" name="camisa" onchange="mostrarTalla()">
+        <option value="">Selecciona una opción</option>
+        <option value="Si">Si</option>
+        <option value="No">No</option>
+    </select>
+
+    <div id="tallaField" style="display: none;">
+        <label for="talla">Talla:</label>
+        <select id="talla" name="talla">
+            <option value="NINGUNA">Ninguna</option>
+            <option value="Chica">Chica</option>
+            <option value="Mediana">Mediana</option>
+            <option value="Grande">Grande</option>
+        </select>
+    </div>
+
+    <label for="telefono">Número de Celular:</label>
+    <input type="text" id="telefono" name="telefono" required>
+
+    <label for="comentarios">Comentarios:</label>
+    <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+    <input type="submit" value="Registrar">
+</form>
+
+<script>
+    function validarFormulario() {
+        var edad = document.getElementById("edad").value;
+        var camisa = document.getElementById("camisa").value;
+
+        if (edad < 18 || edad > 60) {
+            alert("La edad debe estar entre 18 y 60 años.");
+            return false;
+        }
+
+        if (camisa === "Si" && document.getElementById("talla").value === "") {
+            alert("Por favor selecciona una talla para la camisa.");
+            return false;
+        }
+
+        return true;
+    }
+
+    function mostrarTalla() {
+        var camisa = document.getElementById("camisa").value;
+        var tallaField = document.getElementById("tallaField");
+
+        if (camisa === "Si") {
+            tallaField.style.display = "block";
+        } else {
+            tallaField.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
