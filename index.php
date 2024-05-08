@@ -4,6 +4,7 @@ $username = "root";
 $password= "";   
 $db_name="registros";    
 
-$conexion = mysqli_connect ()
+$conexion = mysqli_connect ($servidor, $usuario, $clave, $bd);
+
 
 ?>
